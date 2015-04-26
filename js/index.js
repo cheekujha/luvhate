@@ -35,7 +35,15 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         document.addEventListener('deviceready', function() {
-            facebookConnectPlugin.browserInit('388653418009904')
+        facebookConnectPlugin.browserInit('388653418009904');
+        var fbLoginSuccess = function (userData) {
+            alert("UserInfo: " + JSON.stringify(userData));
+        }
+
+        facebookConnectPlugin.login(["public_profile"],
+            fbLoginSuccess,
+            function (error) { alert("" + error) }
+        );
         // try {
         //     facebookConnectPlugin.init({
         //         appId: "388653418009904",
