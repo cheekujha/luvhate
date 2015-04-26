@@ -36,14 +36,18 @@ var app = {
         app.receivedEvent('deviceready');
         document.addEventListener('deviceready', function() {
         // facebookConnectPlugin.browserInit('388653418009904');
-        var fbLoginSuccess = function (userData) {
-            alert("UserInfo: " + JSON.stringify(userData));
-        }
+        // var fbLoginSuccess = function (userData) {
+        //     alert("UserInfo: " + JSON.stringify(userData));
+        // }
 
-        facebookConnectPlugin.login(["public_profile"],
-            fbLoginSuccess,
-            function (error) { alert("" + error) }
-        );
+        // facebookConnectPlugin.login(["public_profile"],
+        //     fbLoginSuccess,
+        //     function (error) { alert("" + error) }
+        // );
+
+        facebookConnectPlugin.getLoginStatus(function(response){
+            alert(response.status);
+        });
         // try {
         //     facebookConnectPlugin.init({
         //         appId: "388653418009904",
