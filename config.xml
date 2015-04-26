@@ -65,7 +65,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
-        <param name="APP_ID" value="388653418009904" />
+        <param name="APP_ID" value="584636644972667" />
         <param name="APP_NAME" value="luvhate" />
     </gap:plugin>
 
