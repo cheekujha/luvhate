@@ -35,15 +35,16 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         document.addEventListener('deviceready', function() {
-        try {
-            FB.init({
-                appId: "388653418009904",
-                nativeInterface: CDV.FB,
-                useCachedDialogs: false
-            });
-        } catch (e) {
-            alert(e);
-        }
+            facebookConnectPlugin.browserInit('388653418009904')
+        // try {
+        //     facebookConnectPlugin.init({
+        //         appId: "388653418009904",
+        //         nativeInterface: CDV.FB,
+        //         useCachedDialogs: false
+        //     });
+        // } catch (e) {
+        //     alert(e);
+        // }
     }, false);
     },
     // Update DOM on a Received Event
