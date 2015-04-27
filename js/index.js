@@ -35,29 +35,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         document.addEventListener('deviceready', function() {
-        // facebookConnectPlugin.browserInit('388653418009904');
-        // var fbLoginSuccess = function (userData) {
-        //     alert("UserInfo: " + JSON.stringify(userData));
+            alert('deviceready');
         // }
-
-        // facebookConnectPlugin.login(["public_profile"],
-        //     fbLoginSuccess,
-        //     function (error) { alert("" + error) }
-        // );
-
-        facebookConnectPlugin.getLoginStatus(function(response){
-            alert(response.status);
-        });
-        // try {
-        //     facebookConnectPlugin.init({
-        //         appId: "388653418009904",
-        //         nativeInterface: CDV.FB,
-        //         useCachedDialogs: false
-        //     });
-        // } catch (e) {
-        //     alert(e);
-        // }
-    }, false);
+        }, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
