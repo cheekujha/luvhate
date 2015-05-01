@@ -20,7 +20,7 @@
 
 		function search(){
 			alert('MAKING REQUEST');
-			facebookConnectPlugin.api('/search?q=rupal khare&type=user', searchSuccess, searchError);	
+			facebookConnectPlugin.api('/search?q=rupal khare&type=user', [], searchSuccess, searchError);	
 		}
 
 		function searchSuccess(data){
