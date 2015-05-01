@@ -34,10 +34,10 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        document.addEventListener('deviceready', function() {
-            alert('deviceready');
-        // }
-        }, false);
+        // document.addEventListener('deviceready', function() {
+        //     alert('deviceready');
+        // // }
+        // }, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
