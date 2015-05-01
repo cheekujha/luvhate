@@ -20,7 +20,7 @@
 		function fbLoginStatus(){
 			facebookConnectPlugin.getLoginStatus(function(response){
 				// alert(response);
-				setMessageFromFacebook(response);
+				alert(response.status);
 			}, function(err){
 				alert("Error")
 			});
