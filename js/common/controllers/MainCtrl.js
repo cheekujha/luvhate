@@ -4,7 +4,7 @@
 	mainCtrl.$inject = ['$scope', '$timeout'];
 
 	function mainCtrl($scope, $timeout){
-		var vm = this;
+		var vm = this, authResponse;
 		function init(){
 			initMethods();
 		}
@@ -13,9 +13,22 @@
 			vm.fbLoginStatus = fbLoginStatus;
 			vm.fbLogin = fbLogin;
 			vm.fbLogout = fbLogout;
+			vm.search = search;
 		}
 
 		init();
+
+		function search(){
+			facebookConnectPlugin.api('/search?q=rupal khare&type=user', searchSuccess, searchError);	
+		}
+
+		function searchSuccess(data){
+			setMessageFromFacebook(data);
+		}
+
+		function searchError(data){
+			setMessageFromFacebook(data);
+		}
 
 		function fbLoginStatus(){
 			facebookConnectPlugin.getLoginStatus(function(response){
@@ -29,6 +42,8 @@
 		function fbLogin(){
 			var fbLoginSuccess = function (userData) {
 		    // alert("UserInfo: " + JSON.stringify(userData));
+		    var data = JSON.stringify(userData);
+		    authResponse = data.authResponse;
 		    setMessageFromFacebook(userData)
 			}
 
