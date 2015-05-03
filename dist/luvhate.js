@@ -479,6 +479,7 @@
 		}
 
 		function initListeners(){
+			alert('Init Listeners')
 			document.addEventListener('deviceready', onDeviceReady, false);
 		}
 		init();
