@@ -26,39 +26,36 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-      <title>Hello World</title>
-
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="dist/luvhate.libs.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/luvhate.min.css">
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cdv-plugin-fb-connect.js"></script> 
     <script type="text/javascript" src="facebook-js-sdk.js"></script> 
     <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script type="text/javascript" src="dist/luvhate.libs.min.js"></script>
     
     <script type="text/javascript">
-      app.initialize();
+      //app.initialize();
     </script>
   </head>
   <body>
     <div id="fb-root"></div>
-    <div class="app" ng-app="luvhate" ng-controller="mainCtrl as vm">
-      <h1>PhoneGap</h1>
-      <div id="deviceready" class="blink">
-        <p class="event listening">Connecting to Device</p>
-        <p class="event received">Device is Ready</p>
-        <button ng-click="vm.fbLoginStatus()">LOGIN STATUS</button>
-        <button ng-click="vm.fbLogin()">LOGIN</button>
-        <button ng-click="vm.fbLogout()">LOGOUT</button>
-        <button ng-click="vm.search()">Search</button>
-        <div>{{vm.messageFromFacebook}}</div>
+    <div class="app">
+      <div class="navbar navbar-app navbar-absolute-top">
+        <div class="navbar-brand navbar-brand-center">
+          Title
+        </div>
+      </div>
+      <div class='app-body'>
+        <div class='app-content'>
+          <div ui-view class="router-view"></div>
+        </div>
       </div>
     </div>
     
-    <script type="text/javascript" src="dist/luvhate.libs.js"></script>
-
-    <script type="text/javascript" src="js/common/app.js"></script>
-    <script type="text/javascript" src="js/common/controllers/MainCtrl.js"></script>
-
-    <script type="text/javascript" src="js/app.js"></script>
-    
+    <script type="text/javascript" src="dist/templates.js"></script>
+    <script type="text/javascript" src="dist/luvhate.min.js"></script>
   </body>
 </html>
