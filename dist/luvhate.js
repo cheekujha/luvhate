@@ -479,23 +479,24 @@
 		}
 
 		function initListeners(){
-			alert('Init Listeners')
+			alert('Init Listeners');
 			document.addEventListener('deviceready', onDeviceReady, false);
 		}
 		init();
 
 		function startApp(){
-			facebookFactory.browserInit('584636644972667');
+			// facebookFactory.browserInit('584636644972667');
 			checkLoginStatus();
 		}
 
 		function checkLoginStatus(){
+			alert('checkLoginStatus');
 			facebookFactory.getLoginStatus().then(loginStatusSuccess, loginStatusError)
 		}
 
 		function loginStatusSuccess(response){
 			// if(response.status === )
-			alert('>>>>>>>>>loginStatusSuccess>>>>>>>>>>>>>>>>>>',response);
+			alert('>>>>>>>>>loginStatusSuccess>>>>>>>>>>>>>>>>>>'+response);
 			if(response.status === facebookEnums.status.connected){
 				// alert('connected');
 				$state.go('.profile');
@@ -505,7 +506,7 @@
 		}
 
 		function loginStatusError(response){
-			console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>',response);
+			alert('>>>>>>>>>>>>loginStatusError>>>>>>>>>>>>>>>'+response);
 		}
 
 		function onDeviceReady(){
