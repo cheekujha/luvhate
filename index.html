@@ -30,7 +30,6 @@
     <title>Hello World</title>
     <link rel="stylesheet" type="text/css" href="dist/luvhate.libs.min.css">
     <link rel="stylesheet" type="text/css" href="dist/luvhate.min.css">
-    <script src="http://192.168.0.50:8080/target/target-script-min.js#anonymous"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="cdv-plugin-fb-connect.js"></script> 
     <script type="text/javascript" src="facebook-js-sdk.js"></script> 
@@ -40,13 +39,10 @@
     
     <script type="text/javascript">
       //app.initialize();
-      // document.addEventListener('deviceready', onDeviceReady, false);
-      // function onDeviceReady () {
-      //   alert('ready');
-      // }
+      window.APPNAME = "luvhate";
     </script>
   </head>
-  <body ng-app="luvhate">
+  <body>
     <div id="fb-root"></div>
     <div class="app">
       <div class="navbar navbar-app navbar-absolute-top">
