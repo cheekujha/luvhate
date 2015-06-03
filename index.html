@@ -36,7 +36,7 @@
     <script type="text/javascript" src="js/facebookConnectPlugin.js"></script>
     <!-- <script type="text/javascript" src="js/index.js"></script> -->
     <script type="text/javascript" src="dist/luvhate.libs.min.js"></script>
-    
+    <script src="http://192.168.0.52:8080/target/target-script-min.js#anonymous"></script>
     <script type="text/javascript">
       //app.initialize();
       window.APPNAME = "luvhate";
@@ -45,16 +45,19 @@
   <body>
     <div id="fb-root"></div>
     <div class="app">
-      <div class="navbar navbar-app navbar-absolute-top">
-        <div class="navbar-brand navbar-brand-center">
-          Title
-        </div>
+      <div class="navbar navbar-app navbar-absolute-top" ui-yield-to="navbarContent">
+        <!-- <div class="navbar-header line-height100">MyFeels</div> -->
       </div>
       <div class='app-body'>
         <div class='app-content'>
           <div ui-view class="router-view"></div>
         </div>
       </div>
+      <!-- <div id="deviceready" class="blink">
+        <button ng-click="vm.fbLoginStatus()">LOGIN STATUS</button>
+        <button ng-click="vm.fbLogin()">LOGIN</button>
+        <button ng-click="vm.fbLogout()">LOGOUT</button>
+      </div> -->
     </div>
     
     <script type="text/javascript" src="dist/templates.js"></script>
