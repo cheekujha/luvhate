@@ -9,7 +9,7 @@
     <name>MyFeels</name>
 
     <description>
-        Express your true feelings about someone.
+        Have a crush on someone? Say it..... Hate someone? Express it. 
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
@@ -58,6 +58,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <!-- <gap:plugin name="org.apache.cordova.vibration" /> -->
     <gap:plugin name="com.millerjames01.sqlite-plugin" version="1.0.1" />
+    <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
         <param name="APP_ID" value="584636644972667" />
         <param name="APP_NAME" value="luvhate" />
