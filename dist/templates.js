@@ -32,7 +32,7 @@ angular.module("modules/search-list-item/partials/SearchListItem.html", []).run(
 
 angular.module("modules/sidebar-left/partials/SidebarLeft.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("modules/sidebar-left/partials/SidebarLeft.html",
-    "<div class=\"sidebar-left-screen router-view\"><div class=\"nv-bar line-height100\">Menu</div><ul class=\"list-group\"><li class=\"list-group-item\" ng-click=\"vm.routeChanged('home')\" ui-toggle=\"uiSidebarLeft\">Home</li><li class=\"list-group-item\" ng-click=\"vm.routeChanged('feelsList')\" ui-toggle=\"uiSidebarLeft\">Expressed Feelings</li></ul></div>");
+    "<div class=\"sidebar-left-screen router-view\"><div class=\"nv-bar line-height100\">Menu</div><ul class=\"list-group\"><li class=\"list-group-item\" ng-click=\"vm.routeChanged('home')\" ui-toggle=\"uiSidebarLeft\">Home</li><li class=\"list-group-item\" ng-click=\"vm.routeChanged('feelsList')\" ui-toggle=\"uiSidebarLeft\">Expressed Feelings</li><li class=\"list-group-item\" ng-click=\"vm.logout()\">Logout</li></ul></div>");
 }]);
 
 angular.module("modules/user-profile/partials/UserProfile.html", []).run(["$templateCache", function($templateCache) {
